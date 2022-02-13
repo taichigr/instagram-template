@@ -26,6 +26,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <footer class="p-3 mt-4 text-center">Copyright taichi All Rights Reserved</footer>
     </div>
 </body>
 </html>

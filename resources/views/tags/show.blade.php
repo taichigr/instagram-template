@@ -11,6 +11,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container">
         @foreach($tag->products as $product)
             @include('products.card')
         @endforeach

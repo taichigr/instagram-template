@@ -12,8 +12,10 @@
 */
 
 Auth::routes();
+//Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);
 Route::get('/', 'productController@index')->name('products.index');
 //Route::resource('products', 'productController')->only(['show']);
+//Route::resource('products', 'productController')->only(['create'])->middleware('auth');
 Route::resource('products', 'productController')->except(['index'])->middleware('auth');
 Route::post('/products/download/{product}', 'productController@download')->name('products.download');
 Route::get('/users/{user}', 'userController@show')->name('users.show')->middleware('auth');
